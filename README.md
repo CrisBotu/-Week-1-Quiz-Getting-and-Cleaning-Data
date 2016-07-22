@@ -1,6 +1,6 @@
 # -Week-1-Quiz-Getting-and-Cleaning-Data
 
-1. 
+1)
 The American Community Survey distributes downloadable data about United States communities. Download the 2006 microdata survey about housing for the state of Idaho using download.file() from here:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv
