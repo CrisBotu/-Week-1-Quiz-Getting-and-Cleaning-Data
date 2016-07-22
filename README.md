@@ -12,8 +12,11 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FPUMSDataDict06.pdf
 How many properties are worth $1,000,000 or more?
 
 164
+
 31
+
 53
+
 47
 
 Code:
