@@ -23,12 +23,19 @@ Code:
 ##In the directory create a folder with the data container
 setwd("D:/Documentos/Coursera/Data Science/3.Getting and Cleaning Data/Week1")
 > if (!file.exists("data")) {
+
         dir.create("data")
+        
 }
+
 > URL<-"https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv"
+
 > download.file(URL,destfile = "./data/06hid.csv")
+
 > sum(!is.na(dataQuestion1$VAL) & dataQuestion1$VAL==24)
+
 ##[1] 53
+
 ---
 2. 
 Use the data you loaded from Question 1. Consider the variable FES in the code book. Which of the "tidy data" principles does this variable violate?
