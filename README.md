@@ -19,8 +19,8 @@ How many properties are worth $1,000,000 or more?
 
 47
 
-Code:
-##In the directory create a folder with the data container
+##Code:
+//In the directory create a folder with the data container
 setwd("D:/Documentos/Coursera/Data Science/3.Getting and Cleaning Data/Week1")
 > if (!file.exists("data")) {
 
@@ -72,6 +72,8 @@ NA
 
 0
 
+##Code:
+
 > fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FDATA.gov_NGAP.xlsx"
 
 > library(xlsx)
@@ -107,6 +109,8 @@ How many restaurants have zipcode 21231?
 127
 
 100
+
+##Code:
 
 > URL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml"
 
@@ -147,6 +151,8 @@ rowMeans(DT)[DT$SEX==1]; rowMeans(DT)[DT$SEX==2]
 DT[,mean(pwgtp15),by=SEX]
 
 sapply(split(DT$pwgtp15,DT$SEX),mean)
+
+##Code:
 
 > URL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv"
 
