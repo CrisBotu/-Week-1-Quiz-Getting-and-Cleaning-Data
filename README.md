@@ -41,8 +41,11 @@ setwd("D:/Documentos/Coursera/Data Science/3.Getting and Cleaning Data/Week1")
 Use the data you loaded from Question 1. Consider the variable FES in the code book. Which of the "tidy data" principles does this variable violate?
 
 Tidy data has one observation per row.
+
 Each variable in a tidy data set has been transformed to be interpretable.
+
 Each tidy data table contains information about only one type of observation.
+
 -> Tidy data has one variable per column. <-
 
 ---
