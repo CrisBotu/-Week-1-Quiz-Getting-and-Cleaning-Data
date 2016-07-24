@@ -56,30 +56,41 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FDATA.gov_NGAP.xlsx
 
 Read rows 18-23 and columns 7-15 into R and assign the result to a variable called:
 
-
 1| dat
 
 What is the value of:
 
-
 1|sum(dat$Zip*dat$Ext,na.rm=T)
 (original data source: http://catalog.data.gov/dataset/natural-gas-acquisition-program)
 
 NA
+
 36534720
+
 154339
+
 0
 
 > fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FDATA.gov_NGAP.xlsx"
+
 > library(xlsx)
+
 Loading required package: rJava
+
 Loading required package: xlsxjars
+
 > rowIndex = 18 : 23
+
 > colIndex = 7 : 15
+
 > download.file(URL,destfile = "./data/gas.xlsx", mode="wb")
+
 > dat <- read.xlsx("./data/gas.xlsx",sheetIndex = 1, rowIndex = rowIndex,colIndex = colIndex, header = TRUE)
+
 > sum(dat$Zip * dat$Ext, na.rm=T)
+
 ##[1] 36534720
+
 ---
 4)
 Read the XML data on Baltimore restaurants from here:
