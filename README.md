@@ -163,24 +163,39 @@ sapply(split(DT$pwgtp15,DT$SEX),mean)
 > DT <- fread(input="./data/06pid.csv", sep=",")
 
 > system.time(DT[,mean(pwgtp15),by=SEX])
+
    user  system elapsed 
+   
    0.00    0.00    0.01 
+   
 > system.time(tapply(DT$pwgtp15,DT$SEX,mean))
+
    user  system elapsed 
+   
       0       0       0 
+
 > system.time(mean(DT$pwgtp15,by=DT$SEX))
+
    user  system elapsed 
+   
       0       0       0 
-> #system.time(rowMeans(DT)[DT$SEX==1])
-> #system.time(rowMeans(DT)[DT$SEX==2])
+
 > system.time(sapply(split(DT$pwgtp15,DT$SEX),mean))
+
    user  system elapsed 
+   
       0       0       0 
-> system.time(mean(DT[DT$SEX==1,]$pwgtp15))  
+      
+> system.time(mean(DT[DT$SEX==1,]$pwgtp15)) 
+
    user  system elapsed 
+   
    0.11    0.04    0.06 
+   
 > system.time(mean(DT[DT$SEX==2,]$pwgtp15))
+
    user  system elapsed 
+   
    0.05    0.00    0.06 
 
 The answer is : DT[,mean(pwgtp15),by=SEX]
