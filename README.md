@@ -56,11 +56,12 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FDATA.gov_NGAP.xlsx
 
 Read rows 18-23 and columns 7-15 into R and assign the result to a variable called:
 
-1| dat
+> 1| dat
 
 What is the value of:
 
-1|sum(dat$Zip*dat$Ext,na.rm=T)
+> 1| sum(dat$Zip*dat$Ext,na.rm=T)
+
 (original data source: http://catalog.data.gov/dataset/natural-gas-acquisition-program)
 
 NA
@@ -100,16 +101,25 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml
 How many restaurants have zipcode 21231?
 
 28
+
 130
+
 127
+
 100
 
 > URL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml"
+
 > library(XML)
+
 > doc <- xmlTreeParse("./data/restaurants.xml", useInternal = TRUE)
+
 > rootNode <- xmlRoot(doc)
+
 > sum(xpathSApply(rootNode, "//zipcode", xmlValue) == "21231")
+
 ##[1] 127
+
 ---
 5. 
 The American Community Survey distributes downloadable data about United States communities. Download the 2006 microdata survey about housing for the state of Idaho using download.file() from here:
@@ -118,20 +128,26 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv
 
 using the fread() command load the data into an R object
 
-
-1|DT
+> 1|DT
+
 The following are ways to calculate the average value of the variable
 
-
-1|pwgtp15
+> 1|pwgtp15
+
 broken down by sex. Using the data.table package, which will deliver the fastest user time?
 
 tapply(DT$pwgtp15,DT$SEX,mean)
+
 mean(DT[DT$SEX==1,]$pwgtp15); mean(DT[DT$SEX==2,]$pwgtp15)
+
 mean(DT$pwgtp15,by=DT$SEX)
+
 rowMeans(DT)[DT$SEX==1]; rowMeans(DT)[DT$SEX==2]
+
 DT[,mean(pwgtp15),by=SEX]
+
 sapply(split(DT$pwgtp15,DT$SEX),mean)
 
 > URL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06pid.csv"
+
 > download.file(URL,destfile = "./data/06pid.csv")
