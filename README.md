@@ -23,37 +23,30 @@ Code:
 ##In the directory create a folder with the data container
 setwd("D:/Documentos/Coursera/Data Science/3.Getting and Cleaning Data/Week1")
 > if (!file.exists("data")) {
->
 >       dir.create("data")
->      
->}
->
+> }
 > URL<-"https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv"
->
 > download.file(URL,destfile = "./data/06hid.csv")
->
 > sum(!is.na(dataQuestion1$VAL) & dataQuestion1$VAL==24)
 
 ##[1] 53
 
 ---
-2. 
+2)
 Use the data you loaded from Question 1. Consider the variable FES in the code book. Which of the "tidy data" principles does this variable violate?
 
 Tidy data has one observation per row.
 Each variable in a tidy data set has been transformed to be interpretable.
 Each tidy data table contains information about only one type of observation.
-Tidy data has one variable per column.
+-> Tidy data has one variable per column. <-
 
-·The answer is: Tidy data has one variable per column… FES has: gender, marital status and empoloyement status.
 ---
-3. 
+3)
 Download the Excel spreadsheet on Natural Gas Aquisition Program here:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FDATA.gov_NGAP.xlsx
 
 Read rows 18-23 and columns 7-15 into R and assign the result to a variable called:
-
 
 
 1| dat
@@ -80,7 +73,7 @@ Loading required package: xlsxjars
 > sum(dat$Zip * dat$Ext, na.rm=T)
 ##[1] 36534720
 ---
-4. 
+4)
 Read the XML data on Baltimore restaurants from here:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Frestaurants.xml
